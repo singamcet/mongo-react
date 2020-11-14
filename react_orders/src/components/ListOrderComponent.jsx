@@ -12,8 +12,8 @@ class ListOrderComponent extends Component {
             searchTerm: '',
             dateRanges: ["All time", "Last week", "Today"],
             selectedRange: "All time",
-            pageCount: 50,
-            page:0
+            pageCount: 0,
+            page: 0
         }
         this.addOrder = this.addOrder.bind(this);
         this.editOrder = this.editOrder.bind(this);
@@ -35,10 +35,16 @@ class ListOrderComponent extends Component {
         this.props.history.push(`/add-orders/${id}`);
     }
 
-    componentDidMount() {
-        OrdersService.getOrders(this.getSearchObject(this.state.selectedRange)).then((res) => {
-            this.setState({ orders: res.data });
+    searchOrders = (selectedRange) => {
+        OrdersService.getOrders(this.getSearchObject(selectedRange && selectedRange || this.state.selectedRange)).then((res) => {
+            this.setState({
+                orders: res.data.result,
+                pageCount: Math.ceil(res.data.totalPages / 5)
+            });
         });
+    }
+    componentDidMount() {
+        this.searchOrders();
     }
 
     addOrder() {
@@ -83,23 +89,17 @@ class ListOrderComponent extends Component {
         return obj;
     }
     searchHandler = (event) => {
-        OrdersService.getOrders(this.getSearchObject(this.state.selectedRange)).then((res) => {
-            this.setState({ orders: res.data });
-        });
+        this.searchOrders()
     }
 
     changeDateRangeHandler = (event) => {
-        this.state.selectedRange = event.target.value 
-        OrdersService.getOrders(this.getSearchObject(event.target.value)).then((res) => {
-            this.setState({ orders: res.data });
-        });
+        this.state.selectedRange = event.target.value
+        this.searchOrders(event.target.value);
     }
 
-    handlePageClick = (event)=>{
+    handlePageClick = (event) => {
         this.state.page = event.selected
-        OrdersService.getOrders(this.getSearchObject(this.state.selectedRange)).then((res) => {
-            this.setState({ orders: res.data });
-        });
+        this.searchOrders();
     }
 
     render() {
@@ -107,7 +107,8 @@ class ListOrderComponent extends Component {
             <div>
                 <h2 className="text-center">Orders List</h2>
                 <div className="row">
-                    <button className="btn btn-primary" onClick={this.addOrder}> Create Orders</button>
+                    <div className="form-group">
+                        <button className="btn btn-primary" onClick={this.addOrder}> Create Orders</button></div>
                     <div className="form-group">
                         <select className="form-control"
                             placeholder="Select a user"
@@ -127,7 +128,8 @@ class ListOrderComponent extends Component {
                             name="emailId" className="form-control"
                             value={this.state.searchTerm} onChange={this.changeSearchHandler} />
                     </div>
-                    <button className="btn btn-primary" onClick={this.searchHandler}>Search</button>
+                    <div className="form-group">
+                        <button className="btn btn-primary" onClick={this.searchHandler}>Search</button></div>
                 </div>
                 <br></br>
                 <div className="row">

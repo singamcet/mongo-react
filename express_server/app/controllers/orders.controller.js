@@ -77,7 +77,12 @@ exports.search = (req, res) => {
     Orders.aggregate(condition)
         .skip(page*PAGE_SIZE).limit(PAGE_SIZE)
         .then(data => {
-            res.send(data);
+            Orders.aggregate(condition).then(result=>{
+                res.send({
+                    result : data,
+                    totalPages:  result.length
+                });
+            })
         })
         .catch(err => {
             res.status(500).send({
