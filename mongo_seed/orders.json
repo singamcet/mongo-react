@@ -1,0 +1,128 @@
+
+  {
+    "_id": {
+      "$oid": "5faed050dcb3c63988ba843d"
+    },
+    "user": {
+      "$oid": "5faeced8dcb3c63988ba8437"
+    },
+    "product": {
+      "$oid": "5faecd31dcb3c63988ba8431"
+    },
+    "quantity": 2,
+    "total_price": 400,
+    "discounted_price": 400,
+    "createdAt": {
+      "$date": "2020-11-13T18:28:32.674Z"
+    },
+    "updatedAt": {
+      "$date": "2020-11-13T18:28:32.674Z"
+    },
+    "__v": 0
+  }
+  {
+    "_id": {
+      "$oid": "5faed060dcb3c63988ba843e"
+    },
+    "user": {
+      "$oid": "5faecee2dcb3c63988ba8438"
+    },
+    "product": {
+      "$oid": "5faecd4adcb3c63988ba8433"
+    },
+    "quantity": 10,
+    "total_price": 4000,
+    "discounted_price": 3200,
+    "createdAt": {
+      "$date": "2020-11-13T18:28:48.636Z"
+    },
+    "updatedAt": {
+      "$date": "2020-11-13T18:28:48.636Z"
+    },
+    "__v": 0
+  }
+  {
+    "_id": {
+      "$oid": "5faed9dedcb3c63988ba843f"
+    },
+    "user": {
+      "$oid": "5faeceffdcb3c63988ba843b"
+    },
+    "product": {
+      "$oid": "5faecd59dcb3c63988ba8434"
+    },
+    "quantity": 1,
+    "total_price": 12400,
+    "discounted_price": 12400,
+    "createdAt": {
+      "$date": "2020-11-13T19:09:18.503Z"
+    },
+    "updatedAt": {
+      "$date": "2020-11-13T19:09:18.503Z"
+    },
+    "__v": 0
+  }
+  {
+    "_id": {
+      "$oid": "5faed9e6dcb3c63988ba8440"
+    },
+    "user": {
+      "$oid": "5faecee2dcb3c63988ba8438"
+    },
+    "product": {
+      "$oid": "5faecd3fdcb3c63988ba8432"
+    },
+    "quantity": 3,
+    "total_price": 390000,
+    "discounted_price": 312000,
+    "createdAt": {
+      "$date": "2020-11-13T19:09:26.035Z"
+    },
+    "updatedAt": {
+      "$date": "2020-11-13T19:09:26.035Z"
+    },
+    "__v": 0
+  }
+  {
+    "_id": {
+      "$oid": "5faed9f6dcb3c63988ba8441"
+    },
+    "user": {
+      "$oid": "5faeceeedcb3c63988ba8439"
+    },
+    "product": {
+      "$oid": "5faecd3fdcb3c63988ba8432"
+    },
+    "quantity": 3,
+    "total_price": 390000,
+    "discounted_price": 312000,
+    "createdAt": {
+      "$date": "2020-11-13T19:09:42.376Z"
+    },
+    "updatedAt": {
+      "$date": "2020-11-13T19:09:42.376Z"
+    },
+    "__v": 0
+  }
+  {
+    "_id": {
+      "$oid": "5faee95818664a54a3fde488"
+    },
+    "user": {
+      "$oid": "5faeced8dcb3c63988ba8437"
+    },
+    "product": {
+      "$oid": "5faecd4adcb3c63988ba8433"
+    },
+    "quantity": 2,
+    "total_price": 800,
+    "discounted_price": 800,
+    "createdAt": {
+      "$date": "2020-11-13T20:15:20.699Z"
+    },
+    "updatedAt": {
+      "$date": "2020-11-13T20:15:20.699Z"
+    },
+    "__v": 0
+  }
+

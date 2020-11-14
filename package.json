@@ -1,0 +1,5 @@
+{
+        "scripts": {
+                "postinstall": "(cd express_server && npm install); (cd react_orders && npm install)"
+        }
+}

@@ -1,0 +1,41 @@
+version: "2"
+services:
+    client:
+        build: ./react_orders
+        restart: always
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./react_orders:/react_orders
+            - /react_orders/node_modules
+        # depends_on:
+        #     - api
+        # networks:
+        #     webappnetwork  
+    # api:
+    #     build: ./express_server
+    #     restart: always
+    #     ports:
+    #         - "3001:3001"
+    #     volumes:
+    #         - ./express_server:/express_server
+    #         - /express_server/node_modules
+    #     depends_on:
+    #         - mongodb
+    #     # networks:
+    #     #     webappnetwork
+
+    # mongodb:
+    #     image: mongo
+    #     restart: always
+    #     ports:
+    #         - 27018:27018
+    #     # networks:
+    #     #     - webappnetwork
+    # mongo-seed:
+    #     build: ./mongo_seed
+    #     links:
+    #         - mongodb
+# networks:
+#     webappnetwork:
+#         driver: bridge

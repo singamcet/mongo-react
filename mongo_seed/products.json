@@ -1,0 +1,92 @@
+
+  {
+    "_id": {
+      "$oid": "5faecd28dcb3c63988ba8430"
+    },
+    "name": "Shoe",
+    "price": 500,
+    "quantity": 96,
+    "createdAt": {
+      "$date": "2020-11-13T18:15:04.548Z"
+    },
+    "updatedAt": {
+      "$date": "2020-11-13T18:28:16.117Z"
+    },
+    "__v": 0
+  }
+  {
+    "_id": {
+      "$oid": "5faecd31dcb3c63988ba8431"
+    },
+    "name": "Bag",
+    "price": 200,
+    "quantity": 98,
+    "createdAt": {
+      "$date": "2020-11-13T18:15:13.892Z"
+    },
+    "updatedAt": {
+      "$date": "2020-11-13T18:28:32.681Z"
+    },
+    "__v": 0
+  }
+  {
+    "_id": {
+      "$oid": "5faecd3fdcb3c63988ba8432"
+    },
+    "name": "Laptop",
+    "price": 130000,
+    "quantity": 94,
+    "createdAt": {
+      "$date": "2020-11-13T18:15:27.618Z"
+    },
+    "updatedAt": {
+      "$date": "2020-11-13T19:09:42.378Z"
+    },
+    "__v": 0
+  }
+  {
+    "_id": {
+      "$oid": "5faecd4adcb3c63988ba8433"
+    },
+    "name": "Pen Drive",
+    "price": 400,
+    "quantity": 88,
+    "createdAt": {
+      "$date": "2020-11-13T18:15:38.327Z"
+    },
+    "updatedAt": {
+      "$date": "2020-11-13T20:15:20.711Z"
+    },
+    "__v": 0
+  }
+  {
+    "_id": {
+      "$oid": "5faecd59dcb3c63988ba8434"
+    },
+    "name": "Mobile Phone",
+    "price": 12400,
+    "quantity": 99,
+    "createdAt": {
+      "$date": "2020-11-13T18:15:53.122Z"
+    },
+    "updatedAt": {
+      "$date": "2020-11-13T19:09:18.507Z"
+    },
+    "__v": 0
+  }
+  {
+    "_id": {
+      "$oid": "5faecd82dcb3c63988ba8435"
+    },
+    "name": "TV",
+    "price": 15000,
+    "quantity": 100,
+    "createdAt": {
+      "$date": "2020-11-13T18:16:34.845Z"
+    },
+    "updatedAt": {
+      "$date": "2020-11-13T18:16:34.845Z"
+    },
+    "__v": 0
+  }
+
